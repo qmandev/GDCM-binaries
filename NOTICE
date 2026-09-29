@@ -1,0 +1,77 @@
+Praescia
+Copyright 2026 Qiang Ma
+
+This product includes software developed as part of the Praescia project.
+Praescia itself is proprietary — see LICENSE. The components attributed below
+are not: they carry their own Apache-2.0, BSD, and MIT terms, and their
+attribution requirements stand independently of Praescia's license and are not
+waived by it.
+
+Releases up to and including 0.7.0 were published under the Apache License,
+Version 2.0; see LICENSE §8.
+
+================================================================================
+Third-party components
+================================================================================
+
+`PraesciaDICOM` links GDCM (Grassroots DICOM) through the `GDCMShim` target.
+GDCM is built by `Tooling/build-gdcm.sh` into `Vendor/GDCM.xcframework`, which
+is not committed to this repository — but it *is* linked into any binary that
+depends on `PraesciaDICOM`, so the attribution below travels with that binary.
+
+GDCM vendors its dependencies rather than requiring system libraries, so the
+components listed here are those actually merged into the static library. The
+list was taken from the built tree, not from GDCM's documentation. Components
+present in GDCM's source but deliberately excluded from the merge — `socketxx`
+and `gdcmMEXD` (the DIMSE network layer), and the `pvrg` and `getopt` helpers
+used only by GDCM's command-line applications, which are not built — are not
+listed, because they are not in the binary.
+
+--------------------------------------------------------------------------------
+GDCM (Grassroots DICOM) — BSD 3-Clause
+  Copyright (c) 2006-2016 Mathieu Malaterre
+  Copyright (c) 1993-2005 CREATIS
+  (CREATIS = Centre de Recherche et d'Applications en Traitement de l'Image)
+  https://github.com/malaterre/GDCM
+
+--------------------------------------------------------------------------------
+CharLS (JPEG-LS codec) — BSD 3-Clause
+  Copyright (c) 2007-2010, Jan de Vaan
+
+--------------------------------------------------------------------------------
+OpenJPEG (JPEG 2000 codec) — BSD 2-Clause
+  The copyright in this software is being made available under the 2-clause
+  BSD License.
+
+--------------------------------------------------------------------------------
+Independent JPEG Group (JPEG codec, 8/12/16-bit) — IJG License
+  This software is based in part on the work of the Independent JPEG Group.
+
+--------------------------------------------------------------------------------
+Expat (XML parser) — MIT
+  Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd
+                                 and Clark Cooper
+  Copyright (c) 2001-2006 Expat maintainers.
+
+--------------------------------------------------------------------------------
+zlib — zlib License
+  Copyright (C) 1995-2022 Jean-loup Gailly and Mark Adler
+
+--------------------------------------------------------------------------------
+UTF8-CPP — Boost Software License 1.0
+  Copyright 2006 Nemanja Trifunovic
+
+--------------------------------------------------------------------------------
+MD5 implementation — zlib-style License
+  Copyright (C) 1999, 2002 Aladdin Enterprises.
+
+--------------------------------------------------------------------------------
+libuuid — BSD 3-Clause
+  Part of the util-linux/e2fsprogs UUID library, as vendored by GDCM.
+
+================================================================================
+
+Full licence texts for each component are in that component's source
+distribution, reachable by running `Tooling/build-gdcm.sh`, which clones GDCM at
+the tag it pins. The build script is the reproducible record of exactly which
+version produced a given binary.
