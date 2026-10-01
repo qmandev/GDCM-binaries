@@ -28,6 +28,7 @@ Manager-compatible xcframework, distributed as a GitHub Release asset.
 
 ## Licenses
 
-GDCM and the components it vendors are distributed under BSD, MIT, and
-Apache-2.0 terms. `NOTICE` carries every required attribution and must
-accompany any binary that links this framework.
+GDCM and the components it vendors are distributed under BSD, MIT, IJG,
+zlib-style, and Boost terms; none is Apache-2.0. `NOTICE` carries every
+attribution and full licence text, and must accompany any binary that links
+this framework.
