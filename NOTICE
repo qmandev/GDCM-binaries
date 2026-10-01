@@ -1,23 +1,13 @@
-Praescia
-Copyright 2026 Qiang Ma
-
-This product includes software developed as part of the Praescia project.
-Praescia itself is proprietary — see LICENSE. The components attributed below
-are not: they carry their own Apache-2.0, BSD, and MIT terms, and their
-attribution requirements stand independently of Praescia's license and are not
-waived by it.
-
-Releases up to and including 0.7.0 were published under the Apache License,
-Version 2.0; see LICENSE §8.
+Unofficial prebuilt GDCM 3.0.24, built by Qiang Ma. It is not produced,
+endorsed, or supported by the GDCM project, and each component keeps its own
+copyright and licence. This archive contains the following third-party software:
 
 ================================================================================
 Third-party components
 ================================================================================
 
-`PraesciaDICOM` links GDCM (Grassroots DICOM) through the `GDCMShim` target.
-GDCM is built by `Tooling/build-gdcm.sh` into `Vendor/GDCM.xcframework`, which
-is not committed to this repository — but it *is* linked into any binary that
-depends on `PraesciaDICOM`, so the attribution below travels with that binary.
+Anything that links GDCM.xcframework contains these components, so this
+attribution must accompany any binary built with it.
 
 GDCM vendors its dependencies rather than requiring system libraries, so the
 components listed here are those actually merged into the static library. The
@@ -71,7 +61,6 @@ libuuid — BSD 3-Clause
 
 ================================================================================
 
-Full licence texts for each component are in that component's source
-distribution, reachable by running `Tooling/build-gdcm.sh`, which clones GDCM at
-the tag it pins. The build script is the reproducible record of exactly which
-version produced a given binary.
+Full licence texts for each component are in GDCM's source distribution at the
+tag this archive was built from, v3.0.24:
+https://github.com/malaterre/GDCM/tree/v3.0.24
